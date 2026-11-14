@@ -1,5 +1,3 @@
-
-
 # Payroll Assistant
 
 A simple C# console program that calculates an employee's salary, allowances, income tax and net pay, and shows how many banknotes are needed to pay the salary.
@@ -45,4 +43,39 @@ Disabled employees pay 50% less tax.
 
 - [.NET SDK](https://dotnet.microsoft.com/download) 6.0 or newer
 
-## How
+## How to Run
+
+```bash
+git clone <your-repository-url>
+cd <repository-folder>
+dotnet run
+```
+
+## Example
+
+```
+Enter gross salary: 1500
+Marital status (e: married, b: single, d: widowed): e
+Number of children: 2
+Disabled? (e: yes, h: no): h
+Family allowance: 50.00
+Child allowance: 55.00
+Tax rate: 20.00 %
+Tax amount: 321.00
+Total gross salary: 1605.00
+Net salary: 1284.00
+Paid: 1284
+200 AZN x 6
+100 AZN x 0
+50 AZN x 1
+20 AZN x 1
+10 AZN x 1
+5 AZN x 0
+1 AZN x 4
+```
+
+## Notes
+
+- Input is assumed to be valid (no error checking).
+- Disability input: `e`/`E` means yes, anything else means no.
+- Widowed employees receive child allowance but no family allowance.
